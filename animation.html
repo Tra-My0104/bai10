@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #test{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+        animation-name: box;
+        position: relative;
+        left: 0px;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin-left: 200px;
+        border-radius: 100%;
+    
+    }
+    @keyframes box {
+        /* 0%{
+            left: 0px;
+            top: 0px;
+        }
+
+        10%{
+            top: 200px;
+            left: 400px;
+            background-color: blueviolet;
+        }
+        40%{
+            top: 0px;
+            left: 400px;
+            background-color: blue;
+        }
+        100%{
+            top: 0px;
+            left: 0px;
+        } */
+       from{
+        
+        transform: rotate(180deg);
+       }     
+       to{
+        transform: rotate(360deg);
+       }
+      
+
+    } 
+        
+        
+    
+</style>
+<body>
+    <h1>Chuyển động của animation</h1>
+    <div id="test"></div>
+</body>
+</html>

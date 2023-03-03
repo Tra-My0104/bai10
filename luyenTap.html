@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Nhập số tiền</label>
+    <input id="soTien" type="text">
+    <label>Chuyển từ</label>
+    <select  id="Tu">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select>
+    <label>Sang</label>
+    <select id="Ra">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select>
+    <button onclick="chuyenDoi()">chuyển đổi</button>
+    <p id="result" ></p>
+    <script>
+        function chuyenDoi(){
+            let Tien= document.getElementById("soTien").value;
+            
+            let cTu= document.getElementById("Tu").value;
+        
+            let cRa= document.getElementById("Ra").value;
+            if ( cTu=="VND" && cRa=="USD") {
+                document.getElementById("result").innerHTML= Tien * 23000
+            } else if( cTu=="USD" && cRa=="VND"){
+                document.getElementById("result").innerHTML= `${Tien/23000}$`
+            }
+        }
+    </script>
+</body>
+
+</html>

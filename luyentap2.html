@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .title {
+        font-size: 40px;
+        text-align: center;
+        border: 1px solid cadetblue;
+        height: 50px;
+        color: rgb(0, 30, 255);
+        background: linear-gradient(to bottom, #67FF42 0%, #F0FD58 50%, #C3F377 100%)
+    }
+
+    .container_input {
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        color: red;
+        background-color: #C3F377;
+        margin-top: 90px;
+    }
+    input{
+     font-size: 30px;
+     border-radius: 10px;
+     
+    }
+    .container_button{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        background-color: #daf8aa;
+    }
+    .container_button button{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: #F0FD58;
+        font-size: x-large;
+        
+    }
+    .container_button button:hover{
+        background-color: rgb(185, 253, 84);
+        transform: scale(1.2);
+        box-shadow:1px 1px 15px 1px #85ec6e;
+    }
+    p{
+        border: 4px dotted rgb(28, 112, 48);
+        width: 40%;
+        height: 40px;
+        font-size: 30px;
+        text-align: center;
+        margin-left: 430px;
+        margin-top: 200px;
+        color: red;
+    }
+        
+
+    
+
+</style>
+
+<body>
+    <header>
+        <h1 class="title">PHÉP TÍNH CƠ BẢN</h1>
+    </header>
+    <div class="container_input">
+        <div>
+            <label for="">Nhập số thứ nhất</label>
+            <input id="so1" type="number">
+        </div>
+        <div>
+            <label for="">Nhập số thứ hai</label>
+            <input id="so2" type="number">
+        </div>
+    </div>
+
+    <div class="container_button">
+        <button onclick="tong()">+</button>
+        <button onclick="hieu()">-</button>
+        <button onclick="tich()">x</button>
+        <button onclick="thuong()">:</button>
+    </div>
+    <p id="result">Kết quả phép tính:</p>
+    <script>
+        function tong() {
+            let a = Number(document.getElementById("so1").value)
+            let b = Number(document.getElementById("so2").value)
+            let sum = a + b
+            document.getElementById("result").innerHTML = "Kết quả Tổng" + sum
+        }
+        function hieu() {
+            let a = Number(document.getElementById("so1").value)
+            let b = Number(document.getElementById("so2").value)
+            let minus = a - b
+            document.getElementById("result").innerHTML = "Kết quả Hiệu" + minus
+        }
+        function tich() {
+            let a = Number(document.getElementById("so1").value)
+            let b = Number(document.getElementById("so2").value)
+            let multiplication = a * b
+            document.getElementById("result").innerHTML = "Kết quả Tích" + multiplication
+        }
+        function thuong() {
+            let a = Number(document.getElementById("so1").value)
+            let b = Number(document.getElementById("so2").value)
+            let division = a / b
+            document.getElementById("result").innerHTML = "Kết quả Thương" + division
+        }
+    </script>
+</body>
+
+</html>

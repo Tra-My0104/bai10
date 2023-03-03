@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Amount</label>
+    <input id="valueInput" type="text">
+    <label>From Currentcy</label>
+    <select name="" id="fromCurrentcy">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">USD</option>
+    </select>
+    <label for="">To Currentcy</label>
+    <select name="" id="toCurrentcy">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">USD</option>
+    </select>
+    <button onclick="convertMoney()">chuyển đổi</button>
+
+    <p id="result"></p>
+    <script>
+        function convertMoney() {
+            let valueInput = document.getElementById("valueInput").value;
+
+            let valueFromCurrentcy = document.getElementById("fromCurrentcy").value;
+
+            let valueToCurrentcy = document.getElementById("toCurrentcy").value;
+
+            if (valueFromCurrentcy == "USD" && valueToCurrentcy == "VND") {
+                document.getElementById("result").innerHTML = valueInput * 23000;
+            } else if (valueFromCurrentcy == "VND" && valueToCurrentcy == "USD") {
+                document.getElementById("result").innerHTML = `${valueInput / 23000} $`;
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

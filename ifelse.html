@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label >năm</label>
+    <input type="number" id="inputYear">
+    <label>tháng</label>
+    <input type="number" name="" id="inputMonth">
+    
+    <button onclick="xemngay()">xem số ngày</button>
+    <p id="result">Số ngày trong tháng</p>
+    <script>
+        // let a= prompt("nhập chỉ số cân nặng");
+        // let b= prompt("nhập chiều cao");
+        // if(a>60 && b<160 ){
+        //     document.write ("bạn bị béo phì giảm cân đi")
+
+        // }else{
+        //     document.write(" bạn có dáng người tiêu chuẩn")
+
+        // }
+        // Nhập điểm 3 môn Toán, Lý , Hóa sau đó tính điểm trung bình
+        // Nếu điểm trung bình từ 8 trở lên thì xác định loại giỏi
+        // 6.5 <= 8 là khá
+        // 8 <= DTB <= 10 xác định loại giỏi
+        // 5 <= DTB < 6.5 thì là TB
+        // DTB bé hơn 5 thì là yếu
+        // let a= prompt("điểm trung bình môn toán");
+        // let b= prompt("điểm trung bình môn lý");
+        // let c= prompt("diểm trung bình môn hóa");
+        // let trungbinh=a/3+b/3+c/3
+        // if (8<=trungbinh && trungbinh<=10){
+        //     document.write("bạn là học sinh giỏi")
+        // } else if(6.5<=trungbinh && trungbinh<=8){
+        //     document.write("bạn là học sinh khá")
+        // } else if(5<=trungbinh && trungbinh<=6.5){
+        //     document.write("bạn là học sinh trung bình")
+
+        // } else if(trungbinh<=5){
+        //     document.write("bạn là học sinh yếu")
+        // }
+        // let a= +prompt("nhập số thứ nhất");
+        // let b= +prompt("nhập số thứ hai");
+        // let c= +prompt("nhập số thứ ba");
+        // if(a>b && a>c){
+        //     document.write("a là số lớn nhất" +a)
+        // } else if (a>b && a<c){
+        //    document.write("c là số lớn nhất"+c)
+        // }else if(b>a && b>c){
+        //     document.write("b là số lớn nhất"+b)
+        // } else if(b>a && b<c){
+        //     document.write("c là số lớn nhất"+c)
+        // }
+        function xemngay() {
+            let month = Number(document.getElementById("inputMonth").value)
+            let year  = Number(document.getElementById("inputYear").value)
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 9:
+                case 12:
+                    text = "tháng lẻ có 31 ngày"
+                    break;
+                case 4:
+                case 6:
+                case 8:
+                case 10:
+                case 11:
+                    text = "tháng chẵn có 30 ngày"
+                    break;
+                case 2:
+                    if((year %4===0 && year %100!==0 && year %400!==0 )||(year %100===0 && year %400 ===0)){
+                        text = "tháng có 29 ngày"
+                    } else {
+                        text = "tháng có 28 ngày"
+                    }
+                 
+                    break;
+                default:
+                    text = "làm gì có tháng này"
+
+            }
+            document.getElementById("result").innerHTML = text
+        }
+
+    </script>
+</body>
+
+</html>
