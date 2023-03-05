@@ -20,16 +20,48 @@
     <input onclick="range3()" type="range" value="0" max="10" id="ranger3"> cheap
     <script>
         function range1() {
-            let countgood = document.getElementById("ranger1").value
-            let countfast = document.getElementById("ranger2").value
-            let countcheap = document.getElementById("ranger3").value
-        if (countgood==0){
-            document.getElementById("ranger1").value=10 
-            if(coutfast==10 && countcheap==10){
-            document.getElementById("ranger2").value=0
+            let countGood = document.getElementById("ranger1").value;
+            let countFast = document.getElementById("ranger2").value;
+            let countCheap = document.getElementById("ranger3").value;
+        if (countGood == 0){
+            document.getElementById("ranger1").value=10;
+            if(coutCheap==10 && countFast==10){
+            document.getElementById("ranger3").value=0;
             }
         else{
-            document.getElementById("ranger1").value==0
+            document.getElementById("ranger1").value=0;
+        }
+                       
+        }
+            
+        }
+        function range2() {
+            let countGood = document.getElementById("ranger1").value
+            let countFast = document.getElementById("ranger2").value
+            let countCheap = document.getElementById("ranger3").value
+        if (countFast == 0){
+            document.getElementById("ranger2").value=10;
+            if(coutGood==10 && countCheap==10){
+            document.getElementById("ranger1").value=0;
+            }
+        else{
+            document.getElementById("ranger2").value=0;
+        }
+                       
+        }
+            
+        }
+        function range3() {
+            let countGood = document.getElementById("ranger1").value
+            let countFast = document.getElementById("ranger2").value
+            let countCheap = document.getElementById("ranger3").value
+        if (countCheap == 0){
+            document.getElementById("ranger3").value=10; 
+            if(countGood==10 && countFast==10){
+            document.getElementById("ranger1").value=0;
+            }
+        else{
+            document.getElementById("ranger3").value=0;
         }
                        
         }
